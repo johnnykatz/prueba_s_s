@@ -1,13 +1,13 @@
 <!-- Empresa Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('empresa_id', 'Empresa:') !!}
-    {!! Form::select('empresa_id',$empresas ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('empresa_id',$empresas ,null, ['class' => 'form-control','required']) !!}
 </div>
 
 <!-- Tipo Empleado Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('tipo_empleado_id', 'Tipo empleado:') !!}
-    {!! Form::select('tipo_empleado_id',$tiposEmpleados ,null, ['class' => 'form-control','onchange'=>'selectTipoEmpleado()','placeholder'=>'Seleccione..']) !!}
+    {!! Form::select('tipo_empleado_id',$tiposEmpleados ,null, ['class' => 'form-control','onchange'=>'selectTipoEmpleado()','placeholder'=>'Seleccione..','required']) !!}
 </div>
 
 <div id="programador" class="{!! isset($empleado->programador)?null:'hidden' !!}">
@@ -40,7 +40,7 @@
 <!-- Edad Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('edad', 'Edad:') !!}
-    {!! Form::number('edad', null, ['class' => 'form-control']) !!}
+    {!! Form::number('edad', null, ['class' => 'form-control','required']) !!}
 </div>
 
 <!-- Submit Field -->
